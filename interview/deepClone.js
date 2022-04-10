@@ -1,8 +1,25 @@
-const deepClone = (target) => {
+// const deepClone = (target) => {
+//   if (typeof target === 'object') {
+//     const cloneTarget = Array.isArray(target) ? [] : {};
+//     for (const attr in target) {
+//       cloneTarget[attr] = deepClone(target[attr]);
+//     }
+//     return cloneTarget;
+//   } else {
+//     return target;
+//   }
+// };
+const deepClone = (target, map = new Map) => {
   if (typeof target === 'object') {
     const cloneTarget = Array.isArray(target) ? [] : {};
+
+    if (map.has(target)) {
+      return map.get(target);
+    }
+
+    map.set(target, cloneTarget);
     for (const attr in target) {
-      cloneTarget[attr] = deepClone(target[attr]);
+      cloneTarget[attr] = deepClone(target[attr], map);
     }
     return cloneTarget;
   } else {
@@ -17,7 +34,7 @@ const testTarget = {
 };
 
 // 基础版本的deepClone无法解决循环引用问题，会爆栈~
-// testTarget.testTarget = testTarget;
+testTarget.testTarget = testTarget;
 
 const copy = deepClone(testTarget);
 copy.b = ['修改深拷贝过来的引用数据类型', '也没有关系~'];
