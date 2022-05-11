@@ -39,7 +39,7 @@ const test = {
 
 console.log(translateObj(test))
 
-// 网友的解法，还是我那个优雅一些吧~
+// 网友的解法⬇️，还是我那个优雅一些吧~
 function fn(arr) {
   const values = Object.keys(arr);
   let obj = {};
