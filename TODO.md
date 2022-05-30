@@ -31,6 +31,8 @@
 - [x] 【Ajax】实现原生AJAX请求
 - [x] 【myNew】手写new
 - [x] 【instanceof】instanceof关键字
+- [x] 【debounce】防抖
+- [x] 【throttle】节流
 
 ### Promise
 
