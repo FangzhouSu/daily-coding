@@ -1,4 +1,4 @@
-function debounce(fn, delay = 500) {
+function debounce(fn, delay = 1000) {
   let timer;
   return function (...args) {
     if (timer) {
@@ -6,13 +6,13 @@ function debounce(fn, delay = 500) {
     }
     timer = setTimeout(() => {
       fn.apply(this, args);
-      console.log(this, args);
-    })
+      // console.log(this, args);
+    }, delay)
   }
 }
 
-const testFunc = (args) => {
-  console.log('func', args);
+const testFunc = (...args) => {
+  console.log('the args of the testFunc:', args);
 }
 
-debounce(testFunc)('test debouce');
+debounce(testFunc)('test debouce', 'test2');
