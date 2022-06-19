@@ -1,7 +1,7 @@
 // 数组去重
 let arr=[NaN, NaN, { a: 1 }, { a: 1 }, [], [], 6, '6', '6', 6, false, false];
 
-// 轻轻松松for循环版本
+// 1.轻轻松松for循环版本
 Array.prototype.uniqV1 = function() {
   const map = {};
   for (let i = 0; i < this.length; i++) {
@@ -15,7 +15,7 @@ Array.prototype.uniqV1 = function() {
   return Object.values(map);
 }
 
-// 更加优雅，filter版本
+// 2.更加优雅，filter版本
 Array.prototype.uniqV2 = function() {
   const map = {};
   return this.filter((item) => {
@@ -24,4 +24,22 @@ Array.prototype.uniqV2 = function() {
   })
 }
 
-console.log(arr.uniqV1(), arr.uniqV2());
+// 3.reduce也是不错的选择～
+Array.prototype.uniqV3 = function() {
+  const ans = [];
+  this.reduce((acc, cur) => {
+    const key = typeof pre + JSON.stringify(cur);
+    if (!acc.hasOwnProperty(key)) {
+      ans.push(cur);
+      acc[key] = 666;
+    }
+
+    return acc;
+  }, {})
+
+  return ans;
+}
+
+console.log('1.for循环版本', arr.uniqV1());
+console.log('2.filter版本', arr.uniqV2());
+console.log('3.reduce版本', arr.uniqV3());
