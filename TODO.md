@@ -33,6 +33,8 @@
 - [x] 【instanceof】instanceof关键字
 - [x] 【debounce】防抖
 - [x] 【throttle】节流
+- [x] 【setTimeoutTointerval】用setTimeount实现setInterval
+- [ ] 【setIntervalTotimeout】用setInterval实现setTimeout
 
 ### Promise
 
