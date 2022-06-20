@@ -12,7 +12,7 @@ function mySetTimeout(fn, delay) {
   setTimeout(interval, delay);
   return {
     cancel: () => {
-      clearTimeout(timer); // 调用mySetTimeout函数，返回的函数cancel，调用cancel可以结束计时
+      clearTimeout(timer); // 调用mySetTimeout函数，返回函数cancel，调用cancel可以结束计时
     }
   }
 }
