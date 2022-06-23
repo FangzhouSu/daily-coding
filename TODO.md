@@ -34,7 +34,8 @@
 - [x] 【debounce】防抖
 - [x] 【throttle】节流
 - [x] 【setTimeoutTointerval】用setTimeount实现setInterval
-- [ ] 【setIntervalTotimeout】用setInterval实现setTimeout
+- [x] 【setIntervalTotimeout】用setInterval实现setTimeout
+- [x] 【compose】函数式编程-实现一个compose函数（组合函数）
 
 ### Promise
 
