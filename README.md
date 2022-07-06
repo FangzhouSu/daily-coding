@@ -8,10 +8,6 @@
 
 **日**拱一卒，提升编码能力~
 
-## 手写代码问题在线预览地址
-
-[🐲手写代码问题 | 前端知识库@敲代码的小提琴手 (fangzhousu.github.io)](https://fangzhousu.github.io/frontend-knowledge-base/knowledgeBase/coding.html)
-
 ## 手写代码目录
 
 - API
