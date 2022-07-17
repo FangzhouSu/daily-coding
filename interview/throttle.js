@@ -19,7 +19,7 @@ const testFunc = (...args) => {
 
 const test = throttle(testFunc);
 
+// 模拟每半秒会触发一次事件，但是使用节流函数包了一层之后，只有隔delay的时间才会真正触发，避免触发次数过多带来的性能损耗
 setInterval(() => {
   test('test throttle', 'test2');
 }, 500)
-// throttle(testFunc)('test throttle', 'test2');
