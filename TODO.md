@@ -36,6 +36,7 @@
 - [x] 【setTimeoutTointerval】用setTimeount实现setInterval
 - [x] 【setIntervalTotimeout】用setInterval实现setTimeout
 - [x] 【compose】函数式编程-实现一个compose函数（组合函数）
+- [ ] 【currying】实现一个柯里化函数
 
 ### Promise
 
