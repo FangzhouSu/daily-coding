@@ -21,12 +21,12 @@ Array.prototype.uniqV2 = function() {
   return this.filter((item) => {
     const key = typeof item + JSON.stringify(item); // 独一无二的key可以帮助我们区分不同的元素
     return map.hasOwnProperty(key) ? false : map[key] = true; // map[key] = true; 返回true 应该不会有人不知道吧（好吧看到这个解法之前的我就是不知道
-  })
+  });
 }
 
 // 3.reduce也是不错的选择～
 Array.prototype.uniqV3 = function() {
-  const ans = [];
+  const ans = []; // ans记录答案数组
   this.reduce((acc, cur) => {
     const key = typeof pre + JSON.stringify(cur);
     if (!acc.hasOwnProperty(key)) {
@@ -35,11 +35,28 @@ Array.prototype.uniqV3 = function() {
     }
 
     return acc;
-  }, {})
+  }, {});
 
   return ans;
 }
 
+// 4.个人认为这个reduce方法更直接一些～
+Array.prototype.uniqV4 = function() {
+  const map = {}; // 使用map记录哪些元素是重复的
+  const ans = this.reduce((acc, cur) => { 
+    const key = typeof cur + JSON.stringify(cur);
+    if(!map.hasOwnProperty(key)){ 
+      acc.push(cur); // 如果符合【不重复】的前提 则将元素归并进来
+    } 
+    map[key] = 111;
+    return acc; 
+  }, []);
+
+  return ans;
+}
+
+
 console.log('1.for循环版本', arr.uniqV1());
 console.log('2.filter版本', arr.uniqV2());
 console.log('3.reduce版本', arr.uniqV3());
+console.log('4.reduce 2.0版本', arr.uniqV4());
