@@ -27,7 +27,7 @@
 ## 经典面试题
 
 - [x] 【deepClone】深拷贝
-- [ ] LRU缓存原理&代码实现（可以选择map法取巧完成）
+- [ ] LRU缓存原理&代码实现（可以选择map法取巧完成）——https://juejin.cn/post/7023906112843808804#heading-12
 - [x] 【Ajax】实现原生AJAX请求
 - [x] 【myNew】手写new
 - [x] 【instanceof】instanceof关键字
@@ -36,7 +36,8 @@
 - [x] 【setTimeoutTointerval】用setTimeount实现setInterval
 - [x] 【setIntervalTotimeout】用setInterval实现setTimeout
 - [x] 【compose】函数式编程-实现一个compose函数（组合函数）
-- [ ] 【currying】实现一个柯里化函数
+- [x] 【currying】实现一个柯里化函数
+- [x] 【parse】实现JSON.parse
 
 ### Promise
 
