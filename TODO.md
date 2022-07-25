@@ -38,6 +38,7 @@
 - [x] 【compose】函数式编程-实现一个compose函数（组合函数）
 - [x] 【currying】实现一个柯里化函数
 - [x] 【parse】实现JSON.parse
+- [x] 【dom2json】将DOM转换成树结构对象
 
 ### Promise
 
