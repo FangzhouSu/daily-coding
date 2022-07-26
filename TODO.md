@@ -39,6 +39,7 @@
 - [x] 【currying】实现一个柯里化函数
 - [x] 【parse】实现JSON.parse
 - [x] 【dom2json】将DOM转换成树结构对象
+- [x] 【json2dom】根据树结构对象生成DOM节点
 
 ### Promise
 

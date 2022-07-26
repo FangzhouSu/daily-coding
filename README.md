@@ -27,4 +27,3 @@ Underscore提供了100多个函数,包括常用的: **map**, **filter**, **invok
 - interview
 
 常见的面试题，深拷贝，防抖节流，手写promise… 什么？没听说过？emmm 我们今天的面试就到这里，你还有什么想问我的么🙂
-
