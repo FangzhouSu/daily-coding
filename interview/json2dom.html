@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // https://juejin.cn/post/7023906112843808804#heading-16
+    const root = document.querySelector('#root');
+    const vnode = {
+      tag: 'DIV',
+      children: [
+        { tag: 'SPAN', children: [] },
+        {
+          tag: 'UL',
+          children: [
+            { tag: 'LI', children: [] },
+            { tag: 'LI', children: [] }
+          ]
+        }
+      ]
+    }
+    function json2dom(vnode) {
+      // 遇到数字类型 需要将vnode转换为字符串
+      if (typeof vnode === 'number') {
+        vnode = String(vnode);
+      }
+
+      // 如果vnode为字符串类型 则直接生成文本节点即可
+      if (typeof vnode === 'string') {
+        return document.createTextNode(vnode);
+      }
+
+      // 不是以上两种情况 说明是一个对象，要进行如下操作——
+      const dom = document.createElement(vnode.tag);
+      if (vnode.attrs) {
+        // 遍历节点对象的属性
+        Object.keys(vnode.attrs).forEach((key) => {
+          const value = vnode.attrs[key];
+          dom.setAttribute(key, value);
+        });
+      }
+
+      // 递归操作子数组 
+      vnode.children.forEach((child) => dom.appendChild(json2dom(child)));
+      return dom;
+    }
+    
+    console.log(vnode, json2dom(vnode));
+    root.appendChild(json2dom(vnode));
+  </script>
+</body>
+</html>

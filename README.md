@@ -8,10 +8,6 @@
 
 **日**拱一卒，提升编码能力~
 
-## 手写代码问题在线预览地址
-
-[🐲手写代码问题 | 前端知识库@敲代码的小提琴手 (fangzhousu.github.io)](https://fangzhousu.github.io/frontend-knowledge-base/knowledgeBase/coding.html)
-
 ## 手写代码目录
 
 - API
@@ -31,4 +27,3 @@ Underscore提供了100多个函数,包括常用的: **map**, **filter**, **invok
 - interview
 
 常见的面试题，深拷贝，防抖节流，手写promise… 什么？没听说过？emmm 我们今天的面试就到这里，你还有什么想问我的么🙂
-
