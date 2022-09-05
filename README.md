@@ -30,3 +30,4 @@ Underscore提供了100多个函数,包括常用的: **map**, **filter**, **invok
 
 * make some diff
 * test cherrypick
+* test cherrypick2
