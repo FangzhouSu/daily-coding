@@ -1,9 +1,11 @@
 // const deepClone = (target) => {
 //   if (typeof target === 'object') {
 //     const cloneTarget = Array.isArray(target) ? [] : {};
+//
 //     for (const attr in target) {
 //       cloneTarget[attr] = deepClone(target[attr]);
 //     }
+//
 //     return cloneTarget;
 //   } else {
 //     return target;
@@ -13,6 +15,7 @@ const deepClone = (target, map = new Map) => {
   if (typeof target === 'object') {
     const cloneTarget = Array.isArray(target) ? [] : {};
 
+    // 避免出现循环引用的情况
     if (map.has(target)) {
       return map.get(target);
     }
@@ -21,6 +24,7 @@ const deepClone = (target, map = new Map) => {
     for (const attr in target) {
       cloneTarget[attr] = deepClone(target[attr], map);
     }
+  
     return cloneTarget;
   } else {
     return target;
